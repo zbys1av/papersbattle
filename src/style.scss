@@ -9,6 +9,10 @@ html {
   margin: 0;
 }
 
+body {
+  margin: 0;
+}
+
 img {
   vertical-align: bottom;
 }
@@ -95,6 +99,28 @@ ul{
 
   }
 
+  &__item{
+
+    &--dropdown{
+
+      &:hover{
+        .header__arrow{
+          rotate: 180deg;
+          transition: 0.3s;
+        }
+      }
+    }
+  }
+
+  &__find{
+    margin-left: 22px;
+    margin-right: 22px;
+
+    &:hover{
+      cursor: pointer;
+    }
+  }
+
   &__check{
     display: flex;
     flex-direction: row;
@@ -103,6 +129,20 @@ ul{
     padding: 10px 16px 10px 19px;
     border: 1px solid #FFFFFF;
     gap: 8px;
+    transition: 0.3s;
+
+    &:hover{
+      transition: 0.3s;
+      background: #ffff;
+
+      a{
+        color: #9E77ED;
+      }
+
+      .header__check-arrow{
+        stroke: #9E77ED;
+      }
+    }
 
     a{
       text-decoration: none;
@@ -116,4 +156,95 @@ ul{
 
 .main{
   background: #9E77ED;
+  position: relative;
+
+  &__rectangle{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+  }
+
+  &__box{
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    gap: 110px;
+    padding-top: 48px;
+    justify-content: space-between;
+  }
+
+  &__info-box{
+    display: flex;
+    flex-direction: column;
+    z-index: 1;
+    width: 38%;
+    gap: 136px;
+  }
+
+  &__info{
+
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 80px;
+    color: #53389E;
+
+    &--white{
+      color: #FFFFFF;
+    }
+  }
+
+  &__text{
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    color: #6941C6;
+  }
+
+  &__button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    background: #FFFFFF;
+    transition: 0.3s;
+    width: 61.2%;
+    padding: 16px 37px 16px 32px;
+    gap: 21px;
+
+    &:hover{
+      transition: 0.3s;
+      background: transparent;
+      border: 1px solid #ffff;
+
+      .main__button-text{
+        color: #ffff;
+      }
+      
+      .main__arrow{
+        stroke: #ffffff;
+        fill: #ffff;
+        color: #ffff;
+      }
+    }
+  }
+
+  &__button-text{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #6941C6;
+    text-decoration: none;
+  }
+
+  &__arrow{
+  }
+
+  &__img{
+    z-index: 1;
+  }
 }
