@@ -73,6 +73,7 @@ ul{
     position: absolute;
     left: 0;
     padding-right: 100%;
+    z-index: 999;
     border-top: 1px solid rgba(211, 219, 231, 0.5);
   }
 
@@ -150,6 +151,119 @@ ul{
       line-height: 20px;
       color: #FFFFFF;
     }
+  }
+
+  &__dropdown{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: space-between;
+    left: 0;
+    margin-top: 455px;
+    z-index: 999;
+    background: #ffff;
+    width: 100%;
+  }
+
+  &__main-title{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #101828;
+  }
+
+  &__categories{
+    display: grid;
+    grid-template: 
+    "cell cell cell cell"
+    "cell cell cell cell";
+    gap: 8px;
+    margin-top: 32px;
+  }
+
+  &__card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px 16px 54px 16px;
+    background: #FFFFFF;
+    border: 1px solid #E4E7EC;
+  }
+
+  &__bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__title{
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #667085;
+  }
+
+  &__text{
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #101828;
+
+    &--colored{
+      color: #6941C6;
+    }
+  }
+
+  &__card-arrow{
+    stroke: #9E77ED;
+  }
+
+  &__section{
+    padding: 32px 24px;
+  }
+
+  &__section:nth-child(2){
+    background: #F9FAFB;
+    width: 44.4%;
+  }
+
+  &__top{
+    margin-top: 32px;
+    position: relative;
+  }
+
+  &__item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 8px 0;
+  }
+
+  &__website{
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+  }
+
+  &__website-info{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__list-link a{
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #6941C6;
+  }
+
+  .line{
+    position: absolute;
+    border-bottom: 1px solid #E4E7EC;
+    width: 100%;
+    // z-index: 999;
   }
 
 }
