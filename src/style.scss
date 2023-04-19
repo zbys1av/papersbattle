@@ -38,11 +38,22 @@ ul{
 }
 
 .container {
-  max-width: 100%;
+  max-width: 1200px;
   padding: 0px 25px;
+  margin: auto;
 
-  @media (max-width: 1200px) {
-    margin: auto;
+  @media (max-width: 1220px) {
+    max-width: 1000px;
+  }
+
+  //tablet screen
+  @media (max-width: 820px) {
+    width: 100%;
+  }
+
+  //phone screen
+  @media (max-width: 370px) {
+    width: 100%;
   }
 }
 
@@ -54,10 +65,13 @@ ul{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%;
+    // width: 100%;
     align-items: center;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding: 10px 0;
+
+    @media (max-width: 820px) {
+      padding: 10px 32px;
+    }
   }
 
   &__buttons{
@@ -82,6 +96,10 @@ ul{
     gap: 23px;
     margin-top: 0px;
     list-style: none;
+
+    @media (max-width: 820px) {
+      display: none;
+    }
   }
 
   &__list a{
@@ -104,6 +122,20 @@ ul{
           transition: 0.3s;
         }
       }
+
+    // &--dropdown-top{
+    //   &:hover{
+    //     .header{
+    //       background: #ffff;
+    //     }
+    //   }
+    // }
+
+    // &--dropdown-brand{
+    //   &:hover{
+        
+    //   }
+    // }
   }
 
   &__find{
@@ -124,6 +156,10 @@ ul{
     border: 1px solid #FFFFFF;
     gap: 8px;
     transition: 0.3s;
+
+    @media (max-width: 820px) {
+      display: none;
+    }
 
     &:hover{
       transition: 0.3s;
@@ -388,17 +424,11 @@ ul{
   background: #9E77ED;
   position: relative;
 
-  &__rectangle{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    z-index: 0;
-  }
-
   &__box{
     display: flex;
+    position: relative;
     flex-direction: row;
-    overflow: hidden;
+    // overflow: hidden;
     gap: 110px;
     padding-top: 48px;
     justify-content: space-between;
@@ -408,7 +438,7 @@ ul{
     display: flex;
     flex-direction: column;
     z-index: 1;
-    width: 38%;
+    width: 44%;
     gap: 136px;
   }
 
@@ -425,6 +455,11 @@ ul{
     &--white{
       color: #FFFFFF;
     }
+
+    @media (max-width: 820px) {
+      font-size: 48px;
+      line-height: 64px;
+    }
   }
 
   &__text{
@@ -432,6 +467,11 @@ ul{
     font-size: 32px;
     line-height: 40px;
     color: #6941C6;
+
+    @media (max-width: 820px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   &__button{
@@ -445,6 +485,12 @@ ul{
     width: 61.2%;
     padding: 16px 37px 16px 32px;
     gap: 21px;
+    margin-bottom: 48px;
+
+    @media (max-width: 820px) {
+      padding: 10px 16px;
+      width: 69.57%;
+    }
 
     &:hover{
       transition: 0.3s;
@@ -461,6 +507,7 @@ ul{
         color: #ffff;
       }
     }
+
   }
 
   &__button-text{
@@ -469,12 +516,40 @@ ul{
     line-height: 28px;
     color: #6941C6;
     text-decoration: none;
+
+    @media (max-width: 820px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__arrow{
+    @media (max-width: 820px) {
+      width: 13px;
+      height: 13px;
+    }
+  }
+
+  &__rectangle{
+    position: absolute;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    z-index: 0;
+
+    @media (max-width: 820px) {
+      right: -31%;
+    }
   }
 
   &__img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
     z-index: 1;
+
+    @media (max-width: 1220px) {
+      right: 5%;
+    }
   }
 }

@@ -17,8 +17,18 @@ topServices.addEventListener("mouseover", toggleTopServices);
 const brand = document.querySelector('.header__item--dropdown-brand');
 const brandSections = document.querySelector('.sections--brands');
 
+const header = document.querySelector(".header");
+
+
 function toggleBrands(){
     brandSections.classList.toggle('open');
+    // header.classList.toggle('new-style');
+}
+
+function test(){
+    header.classList.toggle('new-style');
 }
 
 brand.addEventListener("mouseover", toggleBrands);
+brand.addEventListener("click", test);
+
