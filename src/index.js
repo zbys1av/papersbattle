@@ -1,41 +1,53 @@
 import './style.scss';
+import lozad from 'lozad'
 console.log('Webpack starter with SCSS and dev server');
+
+const observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();
 
 //? через focus зробити, щоб вони не пропадали/пропадали 
 
 // TOP WRITING SERVICES (--top-services)
-const topServices = document.querySelector('.header__item--dropdown-top');
-const topSections = document.querySelector('.sections--top');
+const dropdownJs = document.querySelectorAll('.header__item--dropdown-js');
+
+const sections = document.querySelectorAll('.sections');
+const header = document.querySelector(".header");
+const body = document.querySelector("body");
 
 function toggleTopServices(){
-    topSections.classList.toggle('open');
+    let popupId = this.dataset.popup;
+    let popupElement = document.querySelector(popupId);
+    sections.forEach(element => {
+        element.classList.remove('open');
+        body.classList.remove('shadow');
+    });
+    if (popupElement) {
+        popupElement.classList.add('open');
+        body.classList.add('shadow');
+
+    }
 }
 
-topServices.addEventListener("mouseover", toggleTopServices);
-
-// BRANDS
-const brand = document.querySelector('.header__item--dropdown-brand');
-const brandSections = document.querySelector('.sections--brands');
-
-const header = document.querySelector(".header");
-
-
-function toggleBrands(){
-    brandSections.classList.toggle('open');
-    // header.classList.toggle('new-style');
+function toggleTopServicesLeave(){
+    if (sections) {
+        sections.forEach(element => {
+            element.classList.remove('open');
+            body.classList.remove('shadow');
+        });
+    }
 }
 
-function test(){
-    header.classList.toggle('new-style');
+if (dropdownJs && header) {
+    dropdownJs.forEach(element => {
+        element.addEventListener("mouseover", toggleTopServices);
+    });
+    header.addEventListener("mouseleave", toggleTopServicesLeave);
 }
 
-brand.addEventListener("mouseover", toggleBrands);
-brand.addEventListener("click", test);
 
 //BURGER
 const menuButton = document.querySelector(".burger");
 const menuShow = document.querySelector(".header__list");
-const body = document.querySelector("body");
 const html = document.querySelector("html");
 // const header = document.querySelector('.header');
 

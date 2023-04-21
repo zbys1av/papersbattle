@@ -3,6 +3,7 @@
 // ____ADDITIONAL CODE____
 * {
   font-family: 'IBM Plex Sans', sans-serif;
+  box-sizing: border-box;
 }
 
 html {
@@ -11,6 +12,17 @@ html {
 
 body {
   margin: 0;
+  &.shadow:after {
+    content: "";
+    display: block;
+    position: fixed;
+    z-index: 2;
+    background: rgba(0,0,0,.78);
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
 }
 
 img {
@@ -128,10 +140,15 @@ ul{
 .header{
   background: #9E77ED;
   transition: 0.58s .5s;
-
+  position: relative;
+  z-index: 4;
   &.new-style{
     background: #ffff;
     transition: 0.4s .5s;
+  }
+
+  &__card-bottom {
+    display: flex;
   }
 
   &__box{
@@ -592,14 +609,14 @@ ul{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 0px;
     background: #FFFFFF;
     transition: 0.3s;
     width: 61.2%;
     padding: 16px 37px 16px 32px;
     gap: 21px;
     margin-bottom: 48px;
-
+    border: 1px solid transparent;
+    text-decoration: none;
     @media (max-width: 920px) {
       padding: 10px 16px;
       width: 69.57%;
@@ -627,9 +644,9 @@ ul{
       }
       
       .main__arrow{
-        stroke: #ffffff;
-        fill: #ffff;
-        color: #ffff;
+        path {
+          fill: #ffff;
+        }
       }
     }
 
