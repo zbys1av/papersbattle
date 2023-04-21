@@ -32,3 +32,24 @@ function test(){
 brand.addEventListener("mouseover", toggleBrands);
 brand.addEventListener("click", test);
 
+//BURGER
+const menuButton = document.querySelector(".burger");
+const menuShow = document.querySelector(".header__list");
+const body = document.querySelector("body");
+const html = document.querySelector("html");
+// const header = document.querySelector('.header');
+
+//BURGER__MENU
+function toggleMenu(){
+    menuButton.classList.toggle('open');      //change to burger
+    menuShow.classList.toggle('show');        //hide menu
+    html.classList.toggle('scroll-hidden');
+    body.classList.toggle('scroll-hidden');
+    header.classList.toggle('new-style');
+}
+
+if(menuButton && menuShow)  {
+  menuButton.addEventListener("click", toggleMenu);
+}
+
+
