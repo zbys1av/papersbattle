@@ -147,10 +147,6 @@ ul{
     transition: 0.4s .5s;
   }
 
-  &__card-bottom {
-    display: flex;
-  }
-
   &__box{
     display: flex;
     flex-direction: row;
@@ -248,6 +244,8 @@ ul{
   }
 
   &__find{
+    display: flex;
+    margin-top: 13px;
     margin-left: 22px;
     margin-right: 22px;
 
@@ -297,7 +295,6 @@ ul{
     position: absolute;
     justify-content: space-between;
     left: 0;
-    // margin-top: 455px;
     z-index: 999;
     background: #ffff;
     width: 100%;
@@ -310,6 +307,10 @@ ul{
     transform: translateY(-120%);
     transition: 0.3s;
     width: 100%;
+
+    @media (max-width: 920px) {
+      transform: translateY(-300%);
+    }
   }
 
   &__section{
@@ -324,7 +325,11 @@ ul{
     }
 
     &--categories{
-
+      @media (max-width: 920px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
     }
 
     &--top{
@@ -333,6 +338,8 @@ ul{
 
     &--brands{
       width: 100%;
+      //!!!!!!!!!!!!!!
+      display: none;
     }
 
     &--usrs-choice{
@@ -428,6 +435,18 @@ ul{
   .open{
     transform: translateY(7.5%);
     transition: 0.3s;
+
+    @media (max-width: 920px) {
+      transform: translateY(3%);
+    }
+  }
+
+  &__back-btn{
+    display: none;
+
+    @media (max-width: 920px) {
+      display: inline;
+    }
   }
 
   &__main-title{
@@ -435,6 +454,10 @@ ul{
     font-size: 16px;
     line-height: 24px;
     color: #101828;
+
+    @media (max-width: 920px) {
+      display: none;
+    }
   }
 
   &__categories{
@@ -444,6 +467,12 @@ ul{
     "cell cell cell cell";
     gap: 8px;
     margin-top: 32px;
+
+    @media (max-width: 920px) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   &__card{
@@ -453,12 +482,21 @@ ul{
     padding: 16px 16px 54px 16px;
     background: #FFFFFF;
     border: 1px solid #E4E7EC;
+
+    @media (max-width: 920px) {
+      width: 100%;
+      padding: 16px 16px 16px 16px;
+    }
   }
 
-  &__bottom{
+  &__card-bottom{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
+    @media (max-width: 920px) {
+      width: 100%;
+    }
   }
 
   &__title{
@@ -481,7 +519,9 @@ ul{
   }
 
   &__card-arrow{
-    stroke: #9E77ED;
+    path{
+      fill: #9E77ED;
+    }
   }
 
   &__top{

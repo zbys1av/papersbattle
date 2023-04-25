@@ -7,13 +7,18 @@ observer.observe();
 
 //? через focus зробити, щоб вони не пропадали/пропадали 
 
-// TOP WRITING SERVICES (--top-services)
 const dropdownJs = document.querySelectorAll('.header__item--dropdown-js');
-
+const headerArrow = document.querySelectorAll('header__arrow');
 const sections = document.querySelectorAll('.sections');
 const header = document.querySelector(".header");
 const body = document.querySelector("body");
+const menuButton = document.querySelector(".burger");
+const menuShow = document.querySelector(".header__list");
+const html = document.querySelector("html");
+const findBtn = document.querySelector("header__find");
+const topBackBtn = document.querySelector("header__back-btn");
 
+// TOP WRITING SERVICES
 function toggleTopServices(){
     let popupId = this.dataset.popup;
     let popupElement = document.querySelector(popupId);
@@ -24,7 +29,6 @@ function toggleTopServices(){
     if (popupElement) {
         popupElement.classList.add('open');
         body.classList.add('shadow');
-
     }
 }
 
@@ -37,19 +41,18 @@ function toggleTopServicesLeave(){
     }
 }
 
+// function backBtn(){
+    topBackBtn.classList.toggle('open');
+// }
+// topBackBtn.addEventListener("click", backBtn);
+
+
 if (dropdownJs && header) {
     dropdownJs.forEach(element => {
         element.addEventListener("mouseover", toggleTopServices);
     });
     header.addEventListener("mouseleave", toggleTopServicesLeave);
 }
-
-
-//BURGER
-const menuButton = document.querySelector(".burger");
-const menuShow = document.querySelector(".header__list");
-const html = document.querySelector("html");
-// const header = document.querySelector('.header');
 
 //BURGER__MENU
 function toggleMenu(){
@@ -64,4 +67,5 @@ if(menuButton && menuShow)  {
   menuButton.addEventListener("click", toggleMenu);
 }
 
-
+//FIND BUTTON
+findBtn.classList.toggle('find-js');
