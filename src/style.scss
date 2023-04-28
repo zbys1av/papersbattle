@@ -339,7 +339,7 @@ ul{
     &--brands{
       width: 100%;
       //!!!!!!!!!!!!!!
-      display: none;
+      // display: none;
     }
 
     &--usrs-choice{
@@ -446,6 +446,10 @@ ul{
 
     @media (max-width: 920px) {
       display: inline;
+
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
 
