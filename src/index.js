@@ -14,7 +14,10 @@ const menuButton = document.querySelector(".burger");
 const menuShow = document.querySelector(".header__list");
 const html = document.querySelector("html");
 const findBtn = document.querySelector("header__find");
-const topBackBtn = document.querySelector(".header__back-btn");
+const topBackBtn = document.querySelector(".header__back-top");
+const brndBackBtn = document.querySelector(".header__back-brnd");
+const logo = document.querySelector(".header__logo");
+const find = document.querySelector(".header__find");
 
 // TOP WRITING SERVICES
 function toggleTopServices(){
@@ -62,8 +65,10 @@ if (dropdownJs && header) {
 if (topBackBtn) {
     if (document.body.clientWidth > 1024){
         topBackBtn.addEventListener("mouseleave", toggleTopServicesLeave);
+        brndBackBtn.addEventListener("mouseleave", toggleTopServicesLeave);
     } else {
         topBackBtn.addEventListener("click", toggleTopServicesLeave);
+        brndBackBtn.addEventListener("click", toggleTopServicesLeave);
     }
 }
 
@@ -74,6 +79,8 @@ function toggleMenu(){
     html.classList.toggle('scroll-hidden');
     body.classList.toggle('scroll-hidden');
     header.classList.toggle('new-style');
+    logo.classList.toggle('new-style');
+    find.classList.toggle('new-style');
 }
 
 if(menuButton && menuShow)  {

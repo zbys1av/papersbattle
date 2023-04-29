@@ -54,6 +54,8 @@ ul{
   width: 25px;
   z-index: 100;
   display: none;
+  transition: 0.58s .5s;
+
 
   @media (max-width: 920px) {
     display: block;
@@ -79,6 +81,8 @@ ul{
   }
 
   &.open {
+    margin-top: 9px;
+    transition: 0.58s .5s;
     span {
       &:nth-child(1) {
         transform: rotate(405deg);
@@ -104,8 +108,26 @@ ul{
 }
 
 .new-style{
-  background: #ffff;
-  transition: 0.6s;
+  &.header{
+    background: #ffff;
+    transition: 0.6s;
+  }
+  
+  &.header__logo svg path{
+    @media (max-width: 920px) {
+      fill: #9E77ED;
+      transition: 0.58s .5s;
+      background: transparent;
+    }
+  }
+
+  &.header__find path{
+    @media (max-width: 920px) {
+      fill: #9E77ED;
+      transition: 0.58s .5s;
+      background: transparent;
+    }
+  }
 }
 
 .container {
@@ -145,6 +167,11 @@ ul{
   &.new-style{
     background: #ffff;
     transition: 0.4s .5s;
+  }
+
+  &__logo svg path{
+    fill: #ffff;
+    transition: 0.58s .5s;
   }
 
   &__box{
@@ -206,7 +233,7 @@ ul{
 
   .show{
     @media (max-width: 920px) {
-      transform: translateY(8.3%);
+      transform: translateY(6.1%);
       transition: 0.9s ease-in-out;
     }
   }
@@ -249,9 +276,19 @@ ul{
     margin-left: 22px;
     margin-right: 22px;
 
+    path{
+      transition: 0.58s .5s;
+      fill: #ffff;
+    }
+
     &:hover{
       cursor: pointer;
     }
+    
+    @media (max-width: 920px) {
+      margin-top: 5px;
+    }
+    
   }
 
   &__check{
@@ -309,7 +346,8 @@ ul{
     width: 100%;
 
     @media (max-width: 920px) {
-      transform: translateY(-300%);
+      transform: translateX(-300%);
+      height: 100%;
     }
   }
 
@@ -338,8 +376,12 @@ ul{
 
     &--brands{
       width: 100%;
-      //!!!!!!!!!!!!!!
-      // display: none;
+      @media (max-width: 920px) {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
     }
 
     &--usrs-choice{
@@ -353,6 +395,17 @@ ul{
 
   &__websites-list{
     position: relative;
+    margin-bottom: 20px;
+  }
+
+  &__websites-link{
+    @media (max-width: 920px) {
+      display: none;
+    }
+  }
+
+  &__websites-arrow{
+    rotate: -90deg;
   }
 
   &__websites-item{
@@ -361,6 +414,11 @@ ul{
     justify-content: space-between;
     padding: 7.2px 0;
     height: 41px;
+    margin: 10px 0;
+
+
+    @media (max-width: 920px) {
+    }
   }
 
   &__brands-btn{
@@ -437,12 +495,31 @@ ul{
     transition: 0.3s;
 
     @media (max-width: 920px) {
-      transform: translateY(3%);
+      transform: translateX(0);
+      transform: translateY(3.4%);
     }
   }
 
-  &__back-btn{
+  &__back-top{
     display: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+
+    @media (max-width: 920px) {
+      display: inline;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+  }
+
+  &__back-brnd{
+    display: none;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
 
     @media (max-width: 920px) {
       display: inline;
@@ -564,6 +641,9 @@ ul{
     border-bottom: 1px solid #E4E7EC;
     width: 100%;
     // z-index: 999;
+    @media (max-width: 920px) {
+      
+    }
   }
 
 }
