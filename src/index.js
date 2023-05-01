@@ -13,11 +13,14 @@ const body = document.querySelector("body");
 const menuButton = document.querySelector(".burger");
 const menuShow = document.querySelector(".header__list");
 const html = document.querySelector("html");
-const findBtn = document.querySelector("header__find");
+// const findBtn = document.querySelector("header__find");
 const topBackBtn = document.querySelector(".header__back-top");
 const brndBackBtn = document.querySelector(".header__back-brnd");
 const logo = document.querySelector(".header__logo");
 const find = document.querySelector(".header__find");
+const test = document.querySelector(".header__test");
+const checkBtn = document.querySelector(".header__check");
+const findSec = document.querySelector(".header__dropdown--find");
 
 // TOP WRITING SERVICES
 function toggleTopServices(){
@@ -29,7 +32,6 @@ function toggleTopServices(){
         body.classList.remove('shadow');
     });
     if (popupElement) {
-        console.log("-_-");
         popupElement.classList.add('open');
         body.classList.add('shadow');
     }
@@ -38,11 +40,18 @@ function toggleTopServices(){
 function toggleTopServicesLeave(){
     if (sections) {
         sections.forEach(element => {
-            console.log("leave");
             element.classList.remove('open');
             body.classList.remove('shadow');
         });
     }
+    find.classList.remove('find-js')
+    findSec.classList.remove('open');
+    body.classList.remove('shadow');
+    logo.classList.remove('new-style');
+    checkBtn.classList.remove('new-style');
+    header.classList.remove('new-style');
+    menuShow.classList.remove('find-js');
+    test.classList.remove('find-js');
 }
 
 
@@ -50,7 +59,6 @@ if (dropdownJs && header) {
     dropdownJs.forEach(element => {
         if (document.body.clientWidth > 1024){
             element.addEventListener("mouseover", toggleTopServices);
-            console.log("123123");
             // element.addEventListener("click", toggleTopServices);
         } else if (document.body.clientWidth < 1024){
             element.addEventListener("click", toggleTopServices);
@@ -88,4 +96,25 @@ if(menuButton && menuShow)  {
 }
 
 //FIND BUTTON
-findBtn.classList.toggle('find-js');
+find.addEventListener("click", testFunc);
+
+function toggleFind(){
+    findSec.classList.add('open');
+    body.classList.add('shadow');
+    test.classList.add('find-js');
+}
+
+// function toggleFindLeave(){
+//     findSec.classList.remove('open');
+//     body.classList.remove('shadow');
+// }
+
+function testFunc(){
+    menuShow.classList.add('find-js');
+    find.classList.add('find-js');
+    document.getElementById('test').innerHTML = '<input autofocus class="header__input" placeholder="Search..." type="text">';
+    header.classList.toggle('new-style');
+    logo.classList.toggle('new-style');
+    checkBtn.classList.toggle('new-style');
+    toggleFind();
+}

@@ -114,11 +114,11 @@ ul{
   }
   
   &.header__logo svg path{
-    @media (max-width: 920px) {
+    // @media (max-width: 920px) {
       fill: #9E77ED;
       transition: 0.58s .5s;
       background: transparent;
-    }
+    // }
   }
 
   &.header__find path{
@@ -127,6 +127,43 @@ ul{
       transition: 0.58s .5s;
       background: transparent;
     }
+  }
+
+  &.header__check{
+    background: #6941C6;
+    color: #fff;
+    border: transparent;
+
+    &:hover{
+      background: #bba8e9;
+      color: #ffff;
+      cursor: pointer;
+
+      a{
+        color: #6941C6;
+      }
+    }
+
+  }
+}
+
+.find-js{
+  &.header__list{
+    display: none;
+  }
+
+  &.header__find{
+    position: absolute;
+    top: 10px;
+
+    path{
+      fill: #98A2B3;
+      transition: 0.3s;
+    }
+  }
+
+  &.header__test{
+    display: flex;
   }
 }
 
@@ -270,11 +307,16 @@ ul{
 
   }
 
+  &__test{
+    display: none;
+  }
+
   &__find{
     display: flex;
     margin-top: 13px;
     margin-left: 22px;
     margin-right: 22px;
+    transition: 0.58s .5s;
 
     path{
       transition: 0.58s .5s;
@@ -289,6 +331,23 @@ ul{
       margin-top: 5px;
     }
     
+  }
+
+  &__input{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-right: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 55px;
+    background: #FFFFFF;
+    border: 2px solid #6941C6;
+
+
+    &:focus{
+      outline: none;
+    }
   }
 
   &__check{
@@ -335,6 +394,22 @@ ul{
     z-index: 999;
     background: #ffff;
     width: 100%;
+
+    &--find{
+      display: flex;
+      height: 500%;
+      transform: translateY(-160%);
+      // transform: translateY(60%);
+      padding: 0 30px;
+      transition: 0.58s .5s;
+
+      span{
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 80px;
+        color: #E4E7EC;
+      }
+    }
   }
 
   .sections{
@@ -493,6 +568,11 @@ ul{
   .open{
     transform: translateY(7.5%);
     transition: 0.3s;
+
+    &.header__dropdown--find{
+      transform: translateY(60%);
+      transition: 0.3s;
+    }
 
     @media (max-width: 920px) {
       transform: translateX(0);
