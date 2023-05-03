@@ -1113,3 +1113,63 @@ ul{
     text-decoration: none;
   }
 }
+
+.categories{
+
+  &__title{
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 64px;
+    display: flex;
+    align-items: center;
+    color: #101828;
+    margin-bottom: 36px;
+    margin-top: 80px;
+  }
+
+  &__box{
+    display: grid;
+    grid-template: 
+      "crd crd crd crd"
+      "crd crd crd crd";
+    gap: 20px;
+  }
+
+  &__card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding: 80px 16px 16px;
+    background: #ffffff;
+    border: solid 1px #12B76A
+  }
+
+  &__top{
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #667085;
+  }
+
+  &__info{
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__text{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #101828;
+  }
+
+  &__arrow{
+    width: 18.5px;
+    height: 18.5px;
+    path{
+      fill: #6941C6;
+    }
+  }
+}
