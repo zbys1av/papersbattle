@@ -550,12 +550,14 @@ ul{
   &__choice-mid{
     display: flex;
     flex-direction: column;
+    overflow: hidden;
   }
 
   &__scrolling-txt{
     background: #12B76A;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.56);
+    animation: my-animation 15s linear infinite;
   }
 
   &__pprsowl-link{
@@ -828,22 +830,27 @@ ul{
     align-items: center;
     background: #FFFFFF;
     transition: 0.3s;
-    width: 61.2%;
+    width: 78%;
     padding: 16px 37px 16px 32px;
     gap: 21px;
     margin-bottom: 48px;
     border: 1px solid transparent;
     text-decoration: none;
+
+    @media (max-width: 1250px) {
+      width: auto;
+      justify-content: space-between;
+    }
+
     @media (max-width: 920px) {
       padding: 10px 16px;
-      width: 69.57%;
+      width: auto;
     }
 
     @media (max-width: 600px) {
       position: absolute;
       bottom: 0;
       left: 12%;
-      justify-content: space-between;
       padding: 10px 16px;
     }
 
@@ -945,6 +952,10 @@ ul{
     justify-content: space-between;
     gap: 16px;
     margin-top: 32px;
+
+    @media (max-width: 790px) {
+      flex-direction: column;
+    }
   }
 
   &__card{
@@ -956,6 +967,10 @@ ul{
     background: #F9FAFB;
     text-align: left;
     width: 100%;
+
+    @media (max-width: 790px) {
+      flex-direction: row;
+    }
   }
 
   &__info{
@@ -1002,7 +1017,7 @@ ul{
     flex-direction: row;
     gap: 16px;
     margin-top: 32px;
-    overflow: scroll;
+    overflow: hidden;
   }
 
   &__card{
@@ -1018,6 +1033,7 @@ ul{
     display: flex;
     flex-direction: column;
     background: #D1FADF;
+    overflow: hidden;
 
     img{
       margin: 32px 32px 0px 32px;
@@ -1043,6 +1059,21 @@ ul{
     background: #12B76A;
     text-transform: uppercase;
     color: #FFFFFF;
+    animation: my-animation 15s linear infinite;
+    overflow: hidden;
+    // flex-wrap: nowrap;
+    // white-space: nowrap;
+    background-repeat: repeat;
+    background-size: auto;
+    width: 100%;
+  }
+
+  @keyframes my-animation{
+    from{
+      transform: translateX(100%);
+    } to {
+      transform: translateX(0);
+    }
   }
 
   &__card-info{
@@ -1133,6 +1164,14 @@ ul{
       "crd crd crd crd"
       "crd crd crd crd";
     gap: 20px;
+
+    @media (max-width: 790px) {
+      grid-template: 
+      "crd crd"
+      "crd crd"
+      "crd crd"
+      "crd crd";
+    }
   }
 
   &__card{

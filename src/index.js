@@ -104,11 +104,6 @@ function toggleFind(){
     test.classList.add('find-js');
 }
 
-// function toggleFindLeave(){
-//     findSec.classList.remove('open');
-//     body.classList.remove('shadow');
-// }
-
 function testFunc(){
     menuShow.classList.add('find-js');
     find.classList.add('find-js');
@@ -117,4 +112,13 @@ function testFunc(){
     logo.classList.toggle('new-style');
     checkBtn.classList.toggle('new-style');
     toggleFind();
+}
+
+if(test){
+    test.addEventListener('keyup', inputFunc);
+}
+
+function inputFunc(){
+    console.log(document.getElementById("test").value);
+    document.getElementById('find-box').innerHTML = '<ul><li>FIRST</li><li>SECOND</li><li>THIRD</li><li>FOURTH</li><li>FIFTH</li></ul> <br> <p>Just a test</p>';
 }
