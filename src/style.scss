@@ -545,11 +545,24 @@ ul{
     overflow: hidden;
   }
 
+  &__scrolling-box{
+    background: #12B76A;
+    overflow: hidden;
+  }
+
+  &__scrolling-animation{
+    display: inline;
+    height: 15px;
+  }
+
   &__scrolling-txt{
+    display: flex;
     background: #12B76A;
     text-transform: uppercase;
     color: rgba(255, 255, 255, 0.56);
+    flex-wrap: nowrap;
     animation: my-animation 15s linear infinite;
+    width: 100%;
   }
 
   &__pprsowl-link{
@@ -854,8 +867,9 @@ ul{
     @media (max-width: 600px) {
       position: absolute;
       bottom: 0;
-      left: 12%;
       padding: 10px 16px;
+      width: 100%;
+      left: 0;
     }
 
     @media (max-width: 380px) {
@@ -1053,6 +1067,13 @@ ul{
     margin: 32px 0 0 32px;
   }
 
+  &__scroll-box{
+    display: flex;
+    overflow: hidden;
+    background: #12B76A;
+    flex-wrap: nowrap;
+  }
+
   &__scroll{
     display: flex;
     flex-direction: row;
@@ -1065,7 +1086,7 @@ ul{
     color: #FFFFFF;
     animation: my-animation 15s linear infinite;
     overflow: hidden;
-    // flex-wrap: nowrap;
+    flex-wrap: nowrap;
     // white-space: nowrap;
     background-repeat: repeat;
     background-size: auto;
