@@ -424,18 +424,10 @@ ul{
       }
     }
   }
-
-  .sections{
-    display: flex;
-    position: fixed;
-    background: #ffff;
-    transform: translateY(-120%);
-    transition: 0.3s;
-    width: 100%;
-
-    @media (max-width: 920px) {
-      transform: translateX(-300%);
-      height: 100%;
+  &__dropdown--find{
+    &.open {
+      transform: translateY(60%);
+      transition: 0.3s;
     }
   }
 
@@ -580,20 +572,7 @@ ul{
     color: #ffff;
   }
 
-  .open{
-    transform: translateY(7.5%);
-    transition: 0.3s;
 
-    &.header__dropdown--find{
-      transform: translateY(60%);
-      transition: 0.3s;
-    }
-
-    @media (max-width: 920px) {
-      transform: translateX(0);
-      transform: translateY(3.4%);
-    }
-  }
 
   &__back-top{
     display: none;
@@ -741,6 +720,31 @@ ul{
     }
   }
 
+}
+.sections{
+  display: flex;
+  position: fixed;
+  background: #ffff;
+  transform: translateY(-120%);
+  transition: 0.3s;
+  width: 100%;
+
+  &.open{
+    transform: translateY(33px);
+    transition: 0.3s;
+
+
+
+    @media (max-width: 920px) {
+      transform: translateX(0);
+      transform: translateY(3.4%);
+    }
+  }
+
+  @media (max-width: 920px) {
+    transform: translateX(-300%);
+    height: 100%;
+  }
 }
 
 .main{
@@ -1067,12 +1071,15 @@ ul{
     background-size: auto;
     width: 100%;
   }
-
+  &__scrolling-animation {
+    display: flex;
+    white-space: nowrap;
+  }
   @keyframes my-animation{
     from{
-      transform: translateX(100%);
+      transform: translateX(0%);
     } to {
-      transform: translateX(0);
+      transform: translateX(-100%);
     }
   }
 

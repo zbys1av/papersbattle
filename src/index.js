@@ -17,8 +17,6 @@ const html = document.querySelector("html");
 const topBackBtn = document.querySelector(".header__back-top");
 const brndBackBtn = document.querySelector(".header__back-brnd");
 const logo = document.querySelector(".header__logo");
-const find = document.querySelector(".header__find");
-const test = document.querySelector(".header__test");
 const checkBtn = document.querySelector(".header__check");
 const findSec = document.querySelector(".header__dropdown--find");
 
@@ -94,6 +92,10 @@ function toggleMenu(){
 if(menuButton && menuShow)  {
   menuButton.addEventListener("click", toggleMenu);
 }
+
+
+const find = document.querySelector(".header__find");
+const test = document.querySelector(".header__test");
 
 //FIND BUTTON
 find.addEventListener("click", testFunc);
