@@ -208,6 +208,31 @@ ul{
   color: #0000003a;
 }
 
+.button{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px;
+  background: #F4EBFF;
+  margin-top: 16px;
+  cursor: pointer;
+}
+
+.button-txt{
+  display: block;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 32px;
+  color: #6941C6;
+}
+
+.button-arrow{
+  path{
+    fill: #6941C6;
+  }
+}
+
 // ____MAIN CODE____
 .header{
   background: #9E77ED;
@@ -736,6 +761,7 @@ ul{
   }
 
 }
+
 .sections{
   display: flex;
   position: fixed;
@@ -1358,4 +1384,158 @@ ul{
     bottom: 0;
     right: 0;
   }
+
+  // &__button{
+  //   display: flex;
+  //   flex-direction: row;
+  //   justify-content: space-between;
+  //   align-items: center;
+  //   padding: 32px;
+  //   background: #F4EBFF;
+  //   margin-top: 16px;
+  //   cursor: pointer;
+  // }
+
+  // &__button-txt{
+  //   display: block;
+  //   font-weight: 500;
+  //   font-size: 24px;
+  //   line-height: 32px;
+  //   color: #6941C6;
+  // }
+
+  // &__button-arrow{
+  //   path{
+  //     fill: #6941C6;
+  //   }
+  // }
+}
+
+.guestbook{
+
+  &__box{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    background: #6941C6;
+    max-height: 400px;
+    overflow: hidden;
+  }
+
+  &__title{
+    font-weight: 300;
+    font-size: 48px;
+    line-height: 64px;
+    display: flex;
+    align-items: center;
+    color: #101828;
+    margin-top: 80px;
+    margin-bottom: 32px;
+
+  }
+
+  &__feedback-main{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 32px 32px 64px 32px;
+    width: 100%;
+  }
+
+  &__card-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__ttl{
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 28px;
+    color: #101828;
+
+    &--main{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      color: #FFFFFF;
+    }
+  }
+
+  &__date{
+    font-weight: 500;
+    font-size: 11px;
+    line-height: 16px;
+    color: #667085;
+  }
+
+  &__txt{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #101828;
+
+    &--main{
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 32px;
+      color: #FFFFFF;
+    }
+  }
+
+  &__student{
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__name{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #101828;
+
+    &--main{
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 28px;
+      color: rgba(255, 255, 255, 0.56);
+    }
+  }
+
+  &__university{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: #667085;
+
+    &--main{
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: rgba(255, 255, 255, 0.56);
+    }
+  }
+
+  &__feedback-swiper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-right: 76px;
+    gap: 8px;
+  }
+
+  &__swiper-card{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    gap: 16px;
+    background: #FFFFFF;
+    box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 0px 8px -4px rgba(16, 24, 40, 0.04);
+  }
+
+
 }
