@@ -136,7 +136,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
         loop: true,
         slidesPerView: "auto", 
         pagination: {
-          el: '.swiper-pagination',
+          el: '.swiper-pagination-reviews',
           clickable: true,
         }
     });
@@ -144,12 +144,50 @@ document.addEventListener('DOMContentLoaded', ()=>{
     const swiperVer = new Swiper('.swiper-2', {
 
         modules: [Navigation, Pagination],
-        direction: 'vertical',
         loop: true,
         slidesPerView: "auto",    
         pagination: {
-          el: '.swiper-pagination',
+          el: '.swiper-pagination-guestbook',
           clickable: true,
-        }
+        },
+        breakpoints: {
+            320: {
+                direction: 'horizontal',
+            },
+            768: {
+                direction: 'vertical',
+            },
+        },
     });
+
+    function resizeSlider() {
+        let checkSlider = document.querySelector('.swiper-categories-js').classList.contains('.swiper-initialized');
+
+        if (window.innerWidth <= 767 ) {
+            if (!checkSlider) {
+                const swiperCategories = new Swiper('.swiper-categories-js', {
+                    modules: [Navigation, Pagination],
+                    loop: true,
+                    slidesPerView: "3",
+                    pagination: {
+                        el: '.swiper-pagination-categories',
+                        clickable: true,
+                    }
+                });
+            }
+        }else {
+            if (checkSlider) {
+                swiperCategories.destroy(false,false);
+            }
+
+        }
+    }
+    window.addEventListener('resize', ()=>{
+        resizeSlider();
+    });
+
+    resizeSlider();
+
+
+
 });

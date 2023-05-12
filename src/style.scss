@@ -1067,7 +1067,7 @@ ul{
 }
 
 .reviews{
-  overflow: inherit;
+  overflow: hidden;
 
   &__title{
     font-weight: 300;
@@ -1304,6 +1304,17 @@ ul{
 
 .categories{
 
+
+  .swiper-wrapper {
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template:
+        "crd crd crd crd"
+        "crd crd crd crd";
+      gap: 20px;
+    }
+  }
+
   &__title{
     font-weight: 300;
     font-size: 48px;
@@ -1338,7 +1349,8 @@ ul{
     align-items: flex-start;
     padding: 80px 16px 16px;
     background: #ffffff;
-    border: solid 1px #12B76A
+    border: solid 1px #12B76A;
+    height: 100%;
   }
 
   &__top{
@@ -1527,7 +1539,7 @@ ul{
     background: #6941C6;
     max-height: 400px;
     overflow: hidden;
-
+    position: relative;
     @media (max-width: 790px) {
       flex-direction: column;
       // height: 100%;
