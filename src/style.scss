@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;200;300;400;500;600;700&display=swap');
+@import 'lib/swiper-bundle.min.css';
 
 // ____ADDITIONAL CODE____
 * {
@@ -774,8 +775,6 @@ ul{
     transform: translateY(33px);
     transition: 0.3s;
 
-
-
     @media (max-width: 920px) {
       transform: translateX(0);
       transform: translateY(3.4%);
@@ -1000,6 +999,9 @@ ul{
     margin-top: 32px;
 
     @media (max-width: 790px) {
+    }
+
+    @media (max-width: 520px) {
       flex-direction: column;
     }
   }
@@ -1015,7 +1017,8 @@ ul{
     width: 100%;
 
     @media (max-width: 790px) {
-      flex-direction: row;
+      padding: 16px;
+      gap: 24px;
     }
   }
 
@@ -1030,6 +1033,12 @@ ul{
     font-size: 60px;
     line-height: 80px;
     color: #101828;
+
+    @media (max-width: 790px) {
+      font-size: 48px;
+      line-height: 64px;
+    }
+
   }
 
   &__number{
@@ -1037,6 +1046,11 @@ ul{
     font-size: 40px;
     line-height: 52px;
     color: #101828;
+
+    @media (max-width: 790px) {
+      font-size: 24px;
+      line-height: 32px;
+    }
   }
 
   &__text{
@@ -1044,10 +1058,17 @@ ul{
     font-size: 20px;
     line-height: 28px;
     color: #98A2B3;
+
+    @media (max-width: 790px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 }
 
 .reviews{
+  overflow: inherit;
+
   &__title{
     font-weight: 300;
     font-size: 48px;
@@ -1074,18 +1095,30 @@ ul{
     background: #FFFFFF;
     border: 1px solid #E4E7EC;
 
-    // overflow: hidden;
+    @media (max-width: 790px) {
+    }
   }
 
   &__card-top{
     display: flex;
     flex-direction: column;
     background: #D1FADF;
-    // overflow: hidden;
+    
+    @media (max-width: 790px) {
+      width: 100%;
+    }
 
     img{
       margin: 32px 32px 0px 32px;
       box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.1), 0px 0px 6px -2px rgba(16, 24, 40, 0.05);
+    
+      @media (max-width: 790px) {
+        width: 100%;
+        margin: 0;
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
     }
   }
 
@@ -1106,19 +1139,12 @@ ul{
     // overflow: hidden;
     // white-space: nowrap;
     
+    @media (max-width: 790px) {
+      width: 100%;
+    }
   }
 
   &__scroll{
-    // display: flex;
-    // padding: 8px;
-    // gap: 8px;
-    // text-transform: uppercase;
-    // color: #FFFFFF;
-    // // background: #12B76A;
-    // animation: my-animation 45s linear infinite;
-    // clear: both;
-    // display: inline-block;
-    // overflow: hidden;
     white-space: nowrap;
 
     display: flex;
@@ -1130,11 +1156,6 @@ ul{
     width: 100%;
   }
 
-  // &__scrolling-animation {
-  //   display: flex;
-  //   white-space: nowrap;
-  // }
-
   @keyframes my-animation{
     from{
       transform: translateX(0%);
@@ -1145,6 +1166,10 @@ ul{
 
   &__card-info{
     padding: 32px 32px 0 32px;
+
+    @media (max-width: 790px) {
+      padding: 16px 16px 0 16px;
+    }
   }
 
   &__info-title{
@@ -1152,6 +1177,11 @@ ul{
     font-size: 16px;
     line-height: 24px;
     color: #101828;
+
+    @media (max-width: 790px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__info-list{
@@ -1163,12 +1193,18 @@ ul{
     flex-direction: column;
     gap: 8px;
     padding: 32px 32px 0 32px;
+
+    @media (max-width: 790px) {
+      padding: 16px 16px 0 16px;
+    }
   }
 
   &__rating-box{
     display: flex;
     gap: 8px;
     align-items: center;
+
+
   }
 
   &__customers{
@@ -1177,6 +1213,11 @@ ul{
     line-height: 20px;
     color: #6941C6;
     text-decoration: none;
+
+    @media (max-width: 790px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
   }
 
   &__card-buttons{
@@ -1185,6 +1226,12 @@ ul{
     flex-direction: row;
     gap: 32px;
     align-items: center;
+
+    @media (max-width: 790px) {
+      padding: 16px;
+      gap: 16px;
+      width: 100%;
+    }
   }
 
   &__visit{
@@ -1197,6 +1244,13 @@ ul{
     color: #ffff;
     gap: 12.99px;
     text-decoration: none;
+
+    @media (max-width: 790px) {
+      font-size: 12px;
+      line-height: 20px;
+      width: 100%;
+      padding: 10px 0px;
+    }
   }
 
   &__link path{
@@ -1209,6 +1263,42 @@ ul{
     line-height: 20px;
     color: #6941C6;
     text-decoration: none;
+
+    @media (max-width: 790px) {
+      font-size: 14px;
+      line-height: 20px;
+      width: 100%;
+    }
+  }
+
+  .swiper-1 {
+    overflow: inherit;
+  }
+
+  .swiper-slide{
+    width: 33.5%;
+    @media (max-width: 790px) {
+      width: 36%;
+    }
+  }
+
+  .swiper-wrapper{
+    display: flex;
+    flex-direction: row;
+    overflow: inherit;
+    gap: 30px;
+
+    @media (max-width: 790px) {
+      gap: 8px;
+    }
+  }
+
+  .swiper-pagination {
+    z-index: 20;
+    bottom: auto;
+    .swiper-pagination-bullet {
+      background: #6941C6;
+    }
   }
 }
 
@@ -1290,6 +1380,10 @@ ul{
     border: 8px solid #F2F4F7;
     margin-top: 80px;
     position: relative;
+
+    @media (max-width: 790px) {
+      padding: 24px;
+    }
   }
 
   &__about{
@@ -1303,6 +1397,12 @@ ul{
     line-height: 32px;
     color: #D0D5DD;
     margin-bottom: 32px;
+
+    @media (max-width: 790px) {
+      font-size: 20px;
+      line-height: 28px;
+      margin-bottom: 24px;
+    }
   }
 
   &__phrase{
@@ -1311,6 +1411,11 @@ ul{
     line-height: 64px;
     color: #101828;
     margin-bottom: 64px;
+
+    @media (max-width: 790px) {
+      font-size: 32px;
+      line-height: 40px;
+    }
   }
 
   &__info{
@@ -1318,6 +1423,10 @@ ul{
     flex-direction: column;
     gap: 32px;
     width: 70%;
+
+    @media (max-width: 790px) {
+      gap: 16px;
+    }
   }
 
   &__info-title{
@@ -1345,6 +1454,7 @@ ul{
   &__info-text{
     display: flex;
     flex-direction: column;
+    
   }
 
   &__item-ttl{
@@ -1352,6 +1462,11 @@ ul{
     font-size: 20px;
     line-height: 28px;
     color: #101828;
+
+    @media (max-width: 790px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__item-txt{
@@ -1359,6 +1474,11 @@ ul{
     font-size: 16px;
     line-height: 24px;
     color: #667085;
+
+    @media (max-width: 790px) {
+      font-size: 14px;
+      line-height: 20px;
+    }
   }
 
   &__social{
@@ -1372,10 +1492,18 @@ ul{
     flex-direction: row;
     align-items: center;
     gap: 8px;
+
+    @media (max-width: 790px) {
+      margin-top: 50px;
+    }
   }
 
   &__social-link{
     text-decoration: none;
+
+    @media (max-width: 790px) {
+      display: none;
+    }
   }
 
   &__image{
@@ -1383,32 +1511,10 @@ ul{
     position: absolute;
     bottom: 0;
     right: 0;
+
+    @media (max-width: 790px) {
+    }
   }
-
-  // &__button{
-  //   display: flex;
-  //   flex-direction: row;
-  //   justify-content: space-between;
-  //   align-items: center;
-  //   padding: 32px;
-  //   background: #F4EBFF;
-  //   margin-top: 16px;
-  //   cursor: pointer;
-  // }
-
-  // &__button-txt{
-  //   display: block;
-  //   font-weight: 500;
-  //   font-size: 24px;
-  //   line-height: 32px;
-  //   color: #6941C6;
-  // }
-
-  // &__button-arrow{
-  //   path{
-  //     fill: #6941C6;
-  //   }
-  // }
 }
 
 .guestbook{
@@ -1421,6 +1527,12 @@ ul{
     background: #6941C6;
     max-height: 400px;
     overflow: hidden;
+
+    @media (max-width: 790px) {
+      flex-direction: column;
+      // height: 100%;
+      max-height: 100%;
+    }
   }
 
   &__title{
@@ -1433,6 +1545,10 @@ ul{
     margin-top: 80px;
     margin-bottom: 32px;
 
+    @media (max-width: 790px) {
+      font-size: 20px;
+      line-height: 28px;
+    }
   }
 
   &__feedback-main{
@@ -1441,6 +1557,10 @@ ul{
     gap: 32px;
     padding: 32px 32px 64px 32px;
     width: 100%;
+
+    @media (max-width: 790px) {
+      gap: 24px;
+    }
   }
 
   &__card-top{
@@ -1483,6 +1603,11 @@ ul{
       font-size: 24px;
       line-height: 32px;
       color: #FFFFFF;
+
+      @media (max-height: 790px){
+        font-size: 16px;
+        line-height: 24px;
+      }
     }
   }
 
@@ -1525,6 +1650,16 @@ ul{
     justify-content: space-between;
     padding-right: 76px;
     gap: 8px;
+
+    @media (max-width: 790px) {
+      flex-direction: row;
+    }
+  }
+
+  .swiper-wrapper{
+    @media (max-width: 790px) {
+      flex-direction: row;
+    }
   }
 
   &__swiper-card{
@@ -1537,7 +1672,12 @@ ul{
     box-shadow: 0px 20px 24px -4px rgba(16, 24, 40, 0.1), 0px 0px 8px -4px rgba(16, 24, 40, 0.04);
   }
 
-
+  .swiper-pagination {
+    z-index: 30;
+    .swiper-pagination-bullet {
+      background: #fff;
+    }
+  }
 }
 
 .blog{
@@ -1657,6 +1797,11 @@ ul{
     position: relative;
     margin-top: 32px;
     margin-bottom: 80px;
+
+    @media (max-width: 790px) {
+      flex-direction: column;
+      gap: 8px;
+    }
   }
 
   &__input{
@@ -1689,6 +1834,11 @@ ul{
     right: 32px;
     top: 32px;
     padding: 16px 32px;
+
+    @media (max-width: 790px) {
+      position: static;
+      justify-content: space-between;
+    }
   }
 }
 
@@ -1704,6 +1854,11 @@ ul{
     flex-direction: row;
     gap: 48px;
     justify-content: space-between;
+
+    @media (max-width: 790px) {
+      flex-direction: column;
+      width: 100%;
+    }
   }
 
   &__logo{
@@ -1715,6 +1870,10 @@ ul{
     flex-direction: column;
     gap: 12px;
     width: 35%;
+
+    @media (max-width: 790px) {
+      width: 100%;
+    }
   }
 
   &__title{
@@ -1761,6 +1920,11 @@ ul{
     justify-content: space-between;
     padding-top: 36px;
     padding-bottom: 36px;
+
+    @media (max-width: 790px) {
+      flex-direction: column-reverse;
+      gap: 32px;
+    }
   }
 
   &__copyright{
