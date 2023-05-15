@@ -160,6 +160,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
         },
     });
 
+    const swiperNew = new Swiper('.swiper-3', {
+
+        modules: [Navigation],
+        direction: 'horizontal',
+        loop: true,
+        slidesPerView: "auto", 
+    });
+
     function resizeSlider() {
         let checkSlider = document.querySelector('.swiper-categories-js').classList.contains('.swiper-initialized');
 

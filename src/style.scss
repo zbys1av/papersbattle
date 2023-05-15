@@ -664,6 +664,11 @@ ul{
 
     @media (max-width: 920px) {
       display: none;
+
+      
+      img{
+        display: none;
+      }
     }
   }
 
@@ -1358,6 +1363,15 @@ ul{
         "crd crd crd crd";
       gap: 20px;
     }
+
+    @media (max-width: 790px) {
+      grid-template: 
+      "crd crd"
+      "crd crd"
+      "crd crd"
+      "crd crd";
+      gap: 10px;
+    }
   }
 
   &__title{
@@ -1377,15 +1391,8 @@ ul{
       "crd crd crd crd"
       "crd crd crd crd";
     gap: 20px;
-
-    @media (max-width: 790px) {
-      grid-template: 
-      "crd crd"
-      "crd crd"
-      "crd crd"
-      "crd crd";
-    }
   }
+
 
   &__card{
     display: flex;
@@ -1396,6 +1403,11 @@ ul{
     background: #ffffff;
     border: solid 1px #12B76A;
     height: 100%;
+
+    @media (max-width: 764px) {
+      gap: 10px;
+      width: auto;
+    }
   }
 
   &__top{
@@ -1905,6 +1917,40 @@ ul{
     position: absolute;
     right: 0;
     bottom: 0;
+  }
+
+  .swiper-3 {
+    // overflow: hidden;
+    overflow: inherit;
+  }
+
+  .swiper-slide{
+    width: 33.5%;
+    @media (max-width: 790px) {
+      width: 36%;
+    }
+    @media (max-width: 380px) {
+      width: 100%;
+    }
+  }
+
+  .swiper-wrapper{
+    display: flex;
+    flex-direction: row;
+    // overflow: inherit;
+    gap: 30px;
+
+    @media (max-width: 790px) {
+      gap: 8px;
+    }
+  }
+
+  .swiper-pagination {
+    z-index: 20;
+    bottom: auto;
+    .swiper-pagination-bullet {
+      background: #6941C6;
+    }
   }
 }
 
