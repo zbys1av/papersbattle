@@ -180,6 +180,14 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     pagination: {
                         el: '.swiper-pagination-categories',
                         clickable: true,
+                    },
+                    breakpoints: {
+                        320: {
+                            slidesPerView: "1.5",
+                        },
+                        // 768: {
+                        //     slidesPerView: "3",
+                        // }
                     }
                 });
             }

@@ -1435,7 +1435,8 @@ ul{
 
     @media (max-width: 764px) {
       gap: 10px;
-      width: auto;
+      // width: auto;
+      max-width: 195px;
     }
   }
 
