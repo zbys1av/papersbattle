@@ -1113,6 +1113,7 @@ ul{
     align-items: center;
     color: #101828;
     margin-top: 80px;
+    display: inline-block;
 
     @media (max-width: 650px) {
       display: inline-block;
@@ -1379,6 +1380,10 @@ ul{
       gap: 20px;
     }
 
+    .swiper-slide{
+      width: 100px;
+    }
+
     @media (max-width: 790px) {
       grid-template: 
       "crd crd"
@@ -1389,6 +1394,8 @@ ul{
     }
   }
 
+
+
   &__title{
     font-weight: 300;
     font-size: 48px;
@@ -1398,6 +1405,7 @@ ul{
     color: #101828;
     margin-bottom: 36px;
     margin-top: 80px;
+    display: inline-block;
 
     @media (max-width: 650px) {
       display: inline-block;
@@ -1504,6 +1512,7 @@ ul{
     line-height: 32px;
     color: #D0D5DD;
     margin-bottom: 32px;
+    display: inline-block;
 
     @media (max-width: 790px) {
       font-size: 20px;
@@ -1696,6 +1705,7 @@ ul{
     color: #101828;
     margin-top: 80px;
     margin-bottom: 32px;
+    display: inline-block;
 
     @media (max-width: 650px) {
       display: inline-block;
@@ -1885,6 +1895,7 @@ ul{
 }
 
 .blog{
+  overflow: hidden;
 
   &__title{
     font-weight: 300;
@@ -1895,6 +1906,7 @@ ul{
     color: #101828;
     margin-top: 80px;
     margin-bottom: 32px;
+    display: inline-block;
 
     @media (max-width: 650px) {
       display: inline-block;
@@ -1915,7 +1927,7 @@ ul{
     display: flex;
     flex-direction: row;
     gap: 16px;
-    // width: 100%;
+    overflow: inherit;
     justify-content: space-between;
   }
 
@@ -1989,7 +2001,7 @@ ul{
 
   .swiper-3 {
     // overflow: hidden;
-    overflow: inherit;
+    // overflow: inherit;
   }
 
   .swiper-slide{
@@ -1997,15 +2009,18 @@ ul{
     @media (max-width: 790px) {
       width: 36%;
     }
+    @media (max-width: 500px) {
+      width: 60%;
+    }
     @media (max-width: 380px) {
       width: 100%;
+      min-width: 256px;
     }
   }
 
   .swiper-wrapper{
     display: flex;
     flex-direction: row;
-    // overflow: inherit;
     gap: 30px;
 
     @media (max-width: 790px) {
@@ -2033,6 +2048,7 @@ ul{
     color: #101828;
     margin-top: 80px;
     margin-bottom: 8px;
+    display: inline-block;
 
     @media (max-width: 650px) {
       display: inline-block;
@@ -2167,6 +2183,7 @@ ul{
     border-bottom: 1px solid #E4E7EC;
     width: 100%;
     padding-bottom: 18px;
+    display: inline-block;
 
     @media (max-width: 380px) {
       font-weight: 500;

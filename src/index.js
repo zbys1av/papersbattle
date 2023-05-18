@@ -28,7 +28,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
     function toggleTopServices(){
         let popupId = this.dataset.popup;
         let popupElement = document.querySelector(popupId);
-        console.log(document.body.clientWidth + " if");
         sections.forEach(element => {
             element.classList.remove('open');
             body.classList.remove('shadow');
@@ -185,9 +184,9 @@ document.addEventListener('DOMContentLoaded', ()=>{
                         320: {
                             slidesPerView: "1.5",
                         },
-                        // 768: {
-                        //     slidesPerView: "3",
-                        // }
+                        768: {
+                            slidesPerView: "auto",
+                        }
                     }
                 });
             }
