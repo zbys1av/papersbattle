@@ -155,11 +155,18 @@ ul{
 
   &.header__find{
     position: absolute;
-    top: 10px;
+    top: 15px;
 
     path{
       fill: #98A2B3;
       transition: 0.3s;
+    }
+  }
+
+  &.burger {
+    margin-top: 7px;
+    span{
+      background: #6941C6;
     }
   }
 
@@ -256,9 +263,19 @@ ul{
     transition: 0.4s .5s;
   }
 
+  &__logo{
+    &.new-style{
+      @media (max-width: 400px) {
+        display: none;
+      }
+    }
+  }
+
   &__logo svg path{
     fill: #ffff;
     transition: 0.58s .5s;
+
+
   }
 
   &__box{
@@ -320,7 +337,7 @@ ul{
 
   .show{
     @media (max-width: 920px) {
-      transform: translateY(6.1%);
+      transform: translateY(64px);
       transition: 0.9s ease-in-out;
     }
   }
@@ -394,6 +411,15 @@ ul{
     background: #FFFFFF;
     border: 2px solid #6941C6;
 
+    &.new-style{
+      @media (max-width: 400px) {
+        width: 50px;
+      }
+    }
+
+    @media (max-width: 400px) {
+      width: 100%;
+    }
 
     &:focus{
       outline: none;
@@ -453,11 +479,23 @@ ul{
       padding: 0 30px;
       transition: 0.58s .5s;
 
+      &.new-style{
+        @media (max-width: 400px) {
+          width: 200px;
+        }
+      }
+
       span{
         font-weight: 700;
         font-size: 60px;
         line-height: 80px;
         color: #E4E7EC;
+
+        @media (max-width: 400px) {
+          font-weight: 500;
+          font-size: 40px;
+          line-height: 80px;
+        }
       }
     }
   }
@@ -633,7 +671,9 @@ ul{
     line-height: 24px;
 
     @media (max-width: 920px) {
-      display: inline;
+      display: flex;
+      align-items: center;
+      gap: 10px;
 
       &:hover{
         cursor: pointer;
@@ -648,7 +688,9 @@ ul{
     line-height: 24px;
 
     @media (max-width: 920px) {
-      display: inline;
+      display: flex;
+      gap: 10px;
+      align-items: center;
 
       &:hover{
         cursor: pointer;
@@ -664,7 +706,6 @@ ul{
 
     @media (max-width: 920px) {
       display: none;
-
       
       img{
         display: none;
@@ -793,7 +834,7 @@ ul{
 
     @media (max-width: 920px) {
       transform: translateX(0);
-      transform: translateY(3.4%);
+      transform: translateY(45px);
     }
   }
 
@@ -1381,16 +1422,18 @@ ul{
     }
 
     .swiper-slide{
-      width: 100px;
+      width: 100%;
+      min-width: 220px;
+      height: auto;
     }
 
     @media (max-width: 790px) {
-      grid-template: 
-      "crd crd"
-      "crd crd"
-      "crd crd"
-      "crd crd";
-      gap: 10px;
+      // grid-template: 
+      // "crd crd"
+      // "crd crd"
+      // "crd crd"
+      // "crd crd";
+      // gap: 10px;
     }
   }
 
@@ -1423,10 +1466,10 @@ ul{
   }
 
   &__box{
-    display: grid;
-    grid-template: 
-      "crd crd crd crd"
-      "crd crd crd crd";
+    // display: grid;
+    // grid-template: 
+    //   "crd crd crd crd"
+    //   "crd crd crd crd";
     gap: 20px;
   }
 

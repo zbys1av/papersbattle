@@ -60,10 +60,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
         dropdownJs.forEach(element => {
             if (document.body.clientWidth > 1024){
                 element.addEventListener("mouseover", toggleTopServices);
-                // element.addEventListener("click", toggleTopServices);
             } else if (document.body.clientWidth < 1024){
                 element.addEventListener("click", toggleTopServices);
-                // element.addEventListener("mouseover", toggleTopServices);
             }
         });
         if (document.body.clientWidth > 1024){
@@ -90,10 +88,17 @@ document.addEventListener('DOMContentLoaded', ()=>{
         header.classList.toggle('new-style');
         logo.classList.toggle('new-style');
         find.classList.toggle('new-style');
+        menuButton.classList.remove('find-js');     
+        
+        findSec.classList.remove('open');
+        body.classList.remove('shadow');
+        test.classList.remove('find-js');
+        menuShow.classList.remove('find-js');
+        find.classList.remove('find-js');
     }
 
     if(menuButton && menuShow)  {
-    menuButton.addEventListener("click", toggleMenu);
+        menuButton.addEventListener("click", toggleMenu);
     }
 
 
@@ -104,18 +109,23 @@ document.addEventListener('DOMContentLoaded', ()=>{
     find.addEventListener("click", testFunc);
 
     function toggleFind(){
-        findSec.classList.add('open');
-        body.classList.add('shadow');
-        test.classList.add('find-js');
+        findSec.classList.toggle('open');
+        body.classList.toggle('shadow');
+        test.classList.toggle('find-js');
+        menuShow.classList.toggle('find-js');
+        find.classList.toggle('find-js');
+        menuButton.classList.toggle('find-js');     
     }
 
     function testFunc(){
-        menuShow.classList.add('find-js');
-        find.classList.add('find-js');
         document.getElementById('test').innerHTML = '<input autofocus class="header__input" placeholder="Search..." type="text">';
         header.classList.toggle('new-style');
         logo.classList.toggle('new-style');
         checkBtn.classList.toggle('new-style');
+        sections.forEach(element => {
+            element.classList.remove('open');
+            body.classList.remove('shadow');
+        });
         toggleFind();
     }
 
@@ -182,7 +192,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
                     },
                     breakpoints: {
                         320: {
-                            slidesPerView: "1.5",
+                            slidesPerView: "3",
                         },
                         768: {
                             slidesPerView: "auto",
@@ -192,7 +202,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
             }
         }else {
             if (checkSlider) {
-                swiperCategories.destroy(false,false);
+                swiperCategories.destroy(true,true);
             }
 
         }
