@@ -6,7 +6,10 @@
   font-family: 'IBM Plex Sans', sans-serif;
   box-sizing: border-box;
 }
-
+img {
+  max-width: 100%;
+  height: auto;
+}
 html {
   margin: 0;
 }

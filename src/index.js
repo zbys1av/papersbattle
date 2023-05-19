@@ -177,28 +177,38 @@ document.addEventListener('DOMContentLoaded', ()=>{
         slidesPerView: "auto", 
     });
 
+    let swiperCategories;
+    function setSlider(init) {
+         swiperCategories = new Swiper('.swiper-categories-js', {
+            modules: [Navigation, Pagination],
+            loop: true,
+            slidesPerView: "3",
+            pagination: {
+                el: '.swiper-pagination-categories',
+                clickable: true,
+            },
+            breakpoints: {
+                320: {
+                    slidesPerView: "1.5",
+                },
+                480: {
+                    slidesPerView: "3",
+                },
+                768: {
+                    slidesPerView: "auto",
+                }
+            }
+        }).init(init);
+    }
+
+    setSlider(false);
+
     function resizeSlider() {
-        let checkSlider = document.querySelector('.swiper-categories-js').classList.contains('.swiper-initialized');
+        let checkSlider = document.querySelector('.swiper-categories-js').classList.contains('swiper-initialized');
 
         if (window.innerWidth <= 767 ) {
             if (!checkSlider) {
-                const swiperCategories = new Swiper('.swiper-categories-js', {
-                    modules: [Navigation, Pagination],
-                    loop: true,
-                    slidesPerView: "3",
-                    pagination: {
-                        el: '.swiper-pagination-categories',
-                        clickable: true,
-                    },
-                    breakpoints: {
-                        320: {
-                            slidesPerView: "3",
-                        },
-                        768: {
-                            slidesPerView: "auto",
-                        }
-                    }
-                });
+                setSlider(true);
             }
         }else {
             if (checkSlider) {
@@ -207,6 +217,8 @@ document.addEventListener('DOMContentLoaded', ()=>{
 
         }
     }
+
+
     window.addEventListener('resize', ()=>{
         resizeSlider();
     });
